@@ -1,0 +1,17 @@
+﻿<div ng-controller="SiteOcean.MailChimp.ListPickerController">
+
+    <span ng-if="model.status === 'loading'">Fetching newsletters list...</span>
+
+    <select ng-model="model.value" ng-if="model.status === 'ready'">
+        <option ng-repeat="option in model.lists" ng-selected="model.value==option.id" value="{{option.id}}">{{option.name}}</option>
+    </select>
+
+    <span ng-if="model.status === 'error'">
+        Whoops. Couldn't fetch newsletters lists 😭
+        <span ng-if="model.value">
+            <br />
+            (Your select list id is <strong>{{model.value}}</strong>)
+        </span>
+    </span>
+
+</div>

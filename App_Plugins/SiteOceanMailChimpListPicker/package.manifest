@@ -1,0 +1,29 @@
+﻿{
+    propertyEditors: [
+        {
+            name: "SiteOcean MailChimp List Picker",
+            alias: "SiteOcean.MailChimp.ListPicker",
+            editor:{
+                    view: "~/App_Plugins/SiteOceanMailChimpListPicker/editor.html",
+                    valueType: "STRING"
+            },
+            "prevalues": {
+                "fields": [
+                    {
+                        "key": "apiKey",
+                        "label": "API key",
+                        "view": "textstring",
+                        "validation": [
+                            {
+                                type: "Required" 
+                            }                        
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+	javascript: [
+        "~/App_Plugins/SiteOceanMailChimpListPicker/editor.controller.js"
+    ]
+}
